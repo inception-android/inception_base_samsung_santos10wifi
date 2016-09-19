@@ -4,8 +4,20 @@
         "img": "imgs/synced_recovery.img",
         "stock": "imgs/recovery.img"
     },
+    "update": {
+      "script": {
+          "post": ["scripts/format_cache"]
+      }
+    },
     "__config__": {
         "target": {
+            "root": {
+              "methods": {
+                "supersu": {
+                  "sh": "/sbin/sh"
+                }
+              }
+            },
             "arch": "x86",
             "mount": {
                 "data": {
